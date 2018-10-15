@@ -1,0 +1,7 @@
+server:
+  port: 8082
+spring:
+  cache:
+    ehcache:
+      config: ehcache.xml
+#Spring Boot会自动 扫描路径配置，配置EhCacheCacheMannager的Bean
