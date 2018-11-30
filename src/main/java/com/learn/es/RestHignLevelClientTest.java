@@ -33,7 +33,7 @@ public class RestHignLevelClientTest {
 
     static {
         RestClientBuilder builder = RestClient.builder(
-                new HttpHost("10.10.8.101",9200, "http"));
+                new HttpHost("localhost",9200, "http"));
         restClient = builder.build();
         client =
                 new RestHighLevelClient(restClient);

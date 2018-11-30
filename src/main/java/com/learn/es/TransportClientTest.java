@@ -51,7 +51,7 @@ public class TransportClientTest {
                 .put("client.transport.sniff", true).build());//启用嗅探
         try {
             client.addTransportAddress(
-                    new InetSocketTransportAddress(InetAddress.getByName("10.10.8.101"), 9300));
+                    new InetSocketTransportAddress(InetAddress.getByName("localhost"), 9300));
         } catch (UnknownHostException e) {
             e.printStackTrace();
         }
