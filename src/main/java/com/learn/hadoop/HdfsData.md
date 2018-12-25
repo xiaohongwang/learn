@@ -47,7 +47,7 @@
 13. DFSOutputStream为发出去的数据块保存了ack queue，等待pipeline中的数据节点告知数据已经写入成功。
 ~~~
 ## 读数据流程
-<img src="./hdfs读数据流程.jpg" />
+<img src="./HDFS读数据流程.jpg" />
 
 ~~~
 1. 首先调用FileSystem对象的open方法，其实获取的是一个DistributedFileSystem的实例。
