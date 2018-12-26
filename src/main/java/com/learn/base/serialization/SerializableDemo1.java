@@ -8,25 +8,29 @@ import java.util.ArrayList;
 
 public class SerializableDemo1 {
     public static void main(String[] args) {
-        User user = new User();
-        user.setName("xiaohong");
-        user.setAge(23);
-        User.count = 1;
-        user.setAddress("北京");
-        System.out.println(user);
+//        User user = new User();
+//        user.setName("xiaohong");
+//        user.setAge(23);
+//        User.count = 1;
+//        user.setAddress("北京");
+//        System.out.println(user);
 
 //        User1 user1 = new User1();
 //        user1.setName("xiaohong");
 //        user1.setAge(24);
+//
+//        ArrayList list = new ArrayList();
+//        list.add(1);
+//        list.add(2);
 
-        ArrayList list = new ArrayList();
-        list.add(1);
-        list.add(2);
 
-        try(FileOutputStream fos = new FileOutputStream("E:\\data\\user.txt");
-            ObjectOutputStream oos = new ObjectOutputStream(fos)){
-            oos.writeObject(user);
-        }catch (Exception e){}
+//        User2 user = new User2("小红",20);
+//        try(FileOutputStream fos = new FileOutputStream("E:\\data\\user.txt");
+//            ObjectOutputStream oos = new ObjectOutputStream(fos)){
+//            oos.writeObject(user);
+//        }catch (Exception e){
+//            e.printStackTrace();
+//        }
 
         User.count = 2;
         /**
@@ -35,9 +39,11 @@ public class SerializableDemo1 {
          */
         try(ObjectInputStream ois = new ObjectInputStream(new
                 FileInputStream("E:\\data\\user.txt"))){
-            User list1 = (User)ois.readObject();
+            User2 list1 = (User2)ois.readObject();
             System.out.println(list1);
-        }catch (Exception e){}
+        }catch (Exception e){
+            e.printStackTrace();
+        }
 
     }
 }

@@ -6,7 +6,13 @@ public class User1 implements Externalizable {
 
     private String name;
     private Integer age;
+    //类继承Externalizable，实现序列化，需要有无参构造函数  在反序列化时，会调用类得无参构造函数创建一个新的对象，在进行参数填充
+    public User1(){}
 
+    public User1(String name, Integer age){
+        this.name = name;
+        this.age = age;
+    }
     public String getName() {
         return name;
     }
