@@ -1,4 +1,4 @@
-package com.learn.controller;
+package com.learn.springmvcannotations;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

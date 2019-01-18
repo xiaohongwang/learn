@@ -1,15 +1,11 @@
-package com.learn.controller;
+package com.learn.springmvcannotations;
 
-import org.codehaus.jackson.map.Serializers;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
-
-import javax.servlet.http.HttpSession;
 
 /**
  * @ClassName LogginController
