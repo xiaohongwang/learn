@@ -1,4 +1,4 @@
-package com.learn.springmvcannotations;
+package com.learn.springannotations;
 
 import org.junit.Before;
 import org.junit.Test;

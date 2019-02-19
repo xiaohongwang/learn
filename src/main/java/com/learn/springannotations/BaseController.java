@@ -1,4 +1,4 @@
-package com.learn.springmvcannotations;
+package com.learn.springannotations;
 
 import org.codehaus.jackson.map.Serializers;
 import org.slf4j.Logger;

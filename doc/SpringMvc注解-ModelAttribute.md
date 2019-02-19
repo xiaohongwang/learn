@@ -1,4 +1,4 @@
-## SpringMVC注解
+## SpringMVC注解  ModelAttribute
 [参考资料](https://my.oschina.net/sluggarddd/blog/678603?fromerr=XhvpvVTi)
 [参考资料](https://www.cnblogs.com/liaochong/p/spring_modelattribute.html#3546557)
 ### 1、 ModelAttribute

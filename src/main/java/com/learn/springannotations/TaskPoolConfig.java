@@ -1,4 +1,4 @@
-package com.learn.springmvcannotations;
+package com.learn.springannotations;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
