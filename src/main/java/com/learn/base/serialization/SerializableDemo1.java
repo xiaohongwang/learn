@@ -25,9 +25,10 @@ public class SerializableDemo1 {
 
 
 //        User2 user = new User2("小红",20);
-//        try(FileOutputStream fos = new FileOutputStream("E:\\data\\user.txt");
+//        try(FileOutputStream fos = new FileOutputStream("/Users/wangxiaohong/tmp/User.txt");
 //            ObjectOutputStream oos = new ObjectOutputStream(fos)){
 //            oos.writeObject(user);
+//            System.out.println(user);
 //        }catch (Exception e){
 //            e.printStackTrace();
 //        }
@@ -38,7 +39,7 @@ public class SerializableDemo1 {
          * 这其实是Java中的一个语法糖，背后原理其实是编译器帮我们做了关闭IO流的工作
          */
         try(ObjectInputStream ois = new ObjectInputStream(new
-                FileInputStream("E:\\data\\user.txt"))){
+                FileInputStream("/Users/wangxiaohong/tmp/User.txt"))){
             User2 list1 = (User2)ois.readObject();
             System.out.println(list1);
         }catch (Exception e){

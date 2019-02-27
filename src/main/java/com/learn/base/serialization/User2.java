@@ -1,6 +1,7 @@
 package com.learn.base.serialization;
 
 import java.io.*;
+import java.util.StringJoiner;
 
 public class User2 implements Serializable {
     private static final long serialVersionUID = -6071085924061402257L;
@@ -34,7 +35,10 @@ public class User2 implements Serializable {
 
     @Override
     public String toString() {
-        return name + " : " + age;
+        StringJoiner joiner = new StringJoiner(";", "{","}");
+        joiner.add(name).add(String.valueOf(age)).add(address);
+        return joiner.toString();
+//        return name + " : " + age;
     }
 
     public String getAddress() {
