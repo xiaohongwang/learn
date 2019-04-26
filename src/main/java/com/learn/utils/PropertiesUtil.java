@@ -39,7 +39,7 @@ public class PropertiesUtil {
 
     /**
      * Class.getResource(String path)
-     * 1、path不以'/'开头时，默认是从此类所在的包下取资源
+     * 1、path不以'/'开头时，默认是此类所在的包下取资源
      * 2、path以'/'开头时，则是从项目的ClassPath根下获取资源
      * Class.getClassLoader().getResource(String path)
      * 1、path不能以'/'开头，path是指类加载器的加载范围
@@ -52,7 +52,8 @@ public class PropertiesUtil {
      */
     private static Properties getProperties(){
         Properties prop = new Properties();
-        String savePath = PropertiesUtil.class.getResource(configPath).getPath();
+        String savePath = PropertiesUtil.class.getResource("/conf/config.properties").getPath();
+        System.out.println(savePath);
         //以下方法读取属性文件会缓存问题   ---  未验证成功
 //       InputStream in = PropertiesUtil.class
 //                .getResourceAsStream(configPath);
@@ -76,5 +77,9 @@ public class PropertiesUtil {
     public static String findPropertiesKey(String key){
         Properties prop = getProperties();
         return prop.getProperty(key);
+    }
+
+    public static void main(String[] args) {
+        getProperties();
     }
 }
